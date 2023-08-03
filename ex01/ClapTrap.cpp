@@ -25,6 +25,10 @@ ClapTrap &ClapTrap::operator=( const ClapTrap &clapTrap ) {
 	if (&clapTrap == this) {
 		return *this;
 	}
+	this->_name = clapTrap._name;
+	this->_hitPoints = clapTrap._hitPoints;
+	this->_energyPoints = clapTrap._energyPoints;
+	this->_attackDamage = clapTrap._attackDamage;
 	return *this;
 }
 

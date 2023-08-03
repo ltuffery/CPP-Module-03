@@ -1,4 +1,5 @@
 #include "ScavTrap.h"
+#include "ClapTrap.h"
 #include <string>
 #include <iostream>
 
@@ -12,6 +13,11 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
 
 ScavTrap::~ScavTrap(void) {
 	std::cout << "ScavTrap destructor called" << std::endl;
+}
+
+ScavTrap::ScavTrap(const ScavTrap &copy) : ClapTrap(copy) {
+	std::cout << "ScavTrap copy constructor called" << std::endl;
+	*this = copy;
 }
 
 void ScavTrap::attack(const std::string &target) {
