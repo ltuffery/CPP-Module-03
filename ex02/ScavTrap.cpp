@@ -20,6 +20,16 @@ ScavTrap::ScavTrap(const ScavTrap &copy) : ClapTrap(copy) {
 	*this = copy;
 }
 
+ScavTrap &ScavTrap::operator=(const ScavTrap &scavTrap) {
+	if (&scavTrap == this)
+		return *this;
+	this->_hitPoints = scavTrap._hitPoints;
+	this->_energyPoints = scavTrap._energyPoints;
+	this->_name = scavTrap._name;
+	this->_attackDamage = scavTrap._attackDamage;
+	return *this;
+}
+
 void ScavTrap::attack(const std::string &target) {
 	if (this->_energyPoints > 0 && this->_hitPoints > 0) {
 		std::cout 

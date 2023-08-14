@@ -18,6 +18,16 @@ FragTrap::~FragTrap() {
 	std::cout << "FragTrap destructor called" << std::endl;
 }
 
+FragTrap &FragTrap::operator=(const FragTrap &fragTrap) {
+	if (&fragTrap == this)
+		return *this;
+	this->_name = fragTrap._name;
+	this->_hitPoints = fragTrap._hitPoints;
+	this->_energyPoints = fragTrap._energyPoints;
+	this->_attackDamage = fragTrap._attackDamage;
+	return *this;
+}
+
 void FragTrap::highFivesGuys() {
 	std::cout << "Hight Fives ?" << std::endl;
 }
