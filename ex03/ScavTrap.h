@@ -4,9 +4,10 @@
 #include "ClapTrap.h"
 #include <string>
 
-class ScavTrap : public ClapTrap {
+class ScavTrap : virtual public ClapTrap {
 
 	public:
+		ScavTrap(void);
 		ScavTrap(std::string name);
 		ScavTrap(const ScavTrap &scavTrap);
 		~ScavTrap(void);

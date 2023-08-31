@@ -3,6 +3,14 @@
 #include <ostream>
 #include <functional>
 
+ClapTrap::ClapTrap(void) {
+	std::cout << "Constructor void called" << std::endl;
+	this->_name = "default";
+	this->_hitPoints = 10;
+	this->_energyPoints = 10;
+	this->_attackDamage = 0;
+}
+
 ClapTrap::ClapTrap( std::string name ) {
 	std::cout << "Constructor called" << std::endl;
 	this->_name = name;

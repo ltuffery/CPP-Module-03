@@ -6,7 +6,7 @@
 #    By: ltuffery <ltuffery@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/25 17:52:34 by ltuffery          #+#    #+#              #
-#    Updated: 2023/08/03 14:56:45 by ltuffery         ###   ########.fr        #
+#    Updated: 2023/08/31 19:36:58 by ltuffery         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ CFLAGS	= -Wall -Wextra -Werror
 SRCS	= main.cpp \
 		  ClapTrap.cpp \
 		  ScavTrap.cpp \
-		  FragTrap.cpp
+		  FragTrap.cpp \
+		  DiamondTrap.cpp
 
 OBJS	= $(SRCS:%.cpp=%.o)
 

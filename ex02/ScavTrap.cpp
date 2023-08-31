@@ -3,6 +3,13 @@
 #include <string>
 #include <iostream>
 
+ScavTrap::ScavTrap(void) : ClapTrap() {
+	std::cout << "ScavTrap default constructor called" << std::endl;
+	this->_hitPoints = 100;
+	this->_energyPoints = 50;
+	this->_attackDamage = 20;
+}
+
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
 	std::cout << "ScavTrap constructor called" << std::endl;
 	this->_name = name;
